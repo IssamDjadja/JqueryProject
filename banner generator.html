@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script>
+    $(function() {
+      $('button').click(function() {
+        var name = $('#name').val();
+        var age = $('#age').val();
+        var adjective = $('#adjective').val();
+        var fav = $('#fav').val();
+        var color = $('#colors').val();
+        var Greeting = 'Hello ' + age + ' year old ' + name + '!' + ' You want to get a ' + adjective + ' ' + fav + '.';
+        $('h4').html(Greeting);
+        $('h4').css('color', color);
+
+
+
+        $("#name").on({
+          mouseenter: function() {
+            $(this).css("background-color", "cyan");
+          },
+          mouseleave: function() {
+            $(this).css("background-color", "yellow");
+          },
+        });
+
+        $("#age").on({
+          mouseenter: function() {
+            $(this).css("background-color", "orange");
+          },
+          mouseleave: function() {
+            $(this).css("background-color", "green");
+          },
+        });
+        $('#name').dblclick(function() {
+          alert('Hey you found a secret!');
+        });
+      });
+    });
+
+
+ 
+  </script>
+
+</head>
+
+<body>
+
+  Name:
+  <input id="name">
+  <br> Age:
+  <input id="age">
+  <br> Adjective:
+  <input id="adjective">
+  <br> Dream pet
+  <input id='fav'>
+  <br>
+  <select id='colors'>
+    <option value="Red">Red</option>
+    <option value="Blue">Blue</option>
+    <option value="Orange">Orange</option>
+    <option value="Green">Green</option>
+    <option value="Indigo">Indigo</option>
+    <option value="Purple">Purple</option>
+  </select>
+  <br>
+  <h4></h4>
+  <button>Click Me!</button>
+</body>
+
+</html>
